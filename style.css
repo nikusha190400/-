@@ -1,0 +1,278 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: labor;
+  src: url(font/firago-latin-400-normal.ttf);
+}
+body {
+  width: 100%;
+  height: 1000%;
+  background-color: rgba(203, 196, 196, 0.819);
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 20px 50px;
+  box-sizing: border-box;
+  gap: 40px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 5px 32px 0 rgba(0, 0, 0, 0.37);
+  position: absolute;
+  top: 0;
+  z-index: 1000000;
+}
+
+.logo {
+  position: absolute;
+  top: 100px;
+  left: 110px;
+  opacity: 0.5;
+}
+
+.logo img {
+  width: 70%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+nav a {
+  color: black;
+  font-family: labor;
+  font-weight: 600;
+}
+
+.active-nav {
+  color: #ffffff;
+  letter-spacing: 1.1px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 5px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 10px 15px;
+}
+
+nav a:hover {
+  color: #ffffff;
+  letter-spacing: 1.1px;
+}
+
+button {
+  display: inline-flex;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  font-family: labor;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 5px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.singin {
+  background: none;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+}
+
+.slider {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.slideshow {
+  width: 200%;
+  height: 400%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 1%;
+  overflow: hidden !important;
+  transform: rotate(15deg);
+}
+
+.slide {
+  height: 100%;
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 1%;
+  position: relative;
+  margin: 0;
+  top: 0%;
+  animation: slider 22s ease none infinite;
+}
+
+.slide:nth-child(even) {
+  top: -20%;
+  animation: sliderinvers 22s ease none infinite;
+}
+
+.slide img {
+  width: 100%;
+  height: 10%;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@keyframes slider {
+  0% {
+    top: 0%;
+  }
+  50% {
+    top: -40%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+@keyframes sliderinvers {
+  0% {
+    top: -40%;
+  }
+  50% {
+    top: 0%;
+  }
+  100% {
+    top: -40%;
+  }
+}
+.scroll {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-left-top-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 5px 32px 0 rgba(0, 0, 0, 0.37);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll img {
+  width: 5%;
+  animation: appear 3s ease none infinite;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
